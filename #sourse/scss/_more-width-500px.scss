@@ -1,0 +1,21 @@
+@media (min-width: 500px) {
+   body {
+      & button {
+         font-size: 24px;
+      }
+   }
+   .wrapper {
+      width: 540px;
+      padding: 0;
+   }
+   .calc {
+      &__result {
+         width: 540px;
+         border-radius: 8px;
+         padding: calc(35 / 900 * 100vh) 35px;
+      }
+   }
+   .attribution {
+      padding: 15px;
+   }
+}

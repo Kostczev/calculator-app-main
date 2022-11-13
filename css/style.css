@@ -1,0 +1,356 @@
+@charset "UTF-8";
+/*отступы*/
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+/*перещет области*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/*отключение обводки*/
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+/*делаем блочными некоторые теги*/
+nav, footer, header, aside {
+  display: block;
+}
+
+/*Уравниваем поведение шрифтов и тд для разных браузеров (также запрещает самовольное увеличени шрифтов (айфон))*/
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+/*Говоорим тегам наследовать семейство шрифта*/
+input, button, textarea {
+  font-family: inherit;
+  display: block;
+}
+
+/*еще куча фич, таких как отклчение крестиков и отступов в разных браузерах*/
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+  background: transparent;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+/*Обнуляем все заголовки*/
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+body.first-theme {
+  background-color: hsl(222deg, 26%, 31%);
+  color: hsl(0deg, 0%, 100%);
+}
+
+.first-theme .calc__theme-switch {
+  background: hsl(223deg, 31%, 20%);
+}
+.first-theme .calc__theme-button {
+  background-color: hsl(6deg, 63%, 50%);
+}
+.first-theme .calc__theme-button:hover {
+  background: #f96c5b;
+}
+.first-theme .calc__result {
+  background: hsl(224deg, 36%, 15%);
+}
+.first-theme .calc__keyboard {
+  background: hsl(223deg, 31%, 20%);
+}
+.first-theme .calc__key {
+  background: hsl(30deg, 25%, 89%);
+  box-shadow: 0 0.4444444444vh 0 0 hsl(28deg, 16%, 65%);
+  color: hsl(221deg, 14%, 31%);
+}
+.first-theme .calc__key:hover {
+  background: #ffffff;
+}
+.first-theme .key-del, .first-theme .key-reset {
+  background: hsl(225deg, 21%, 49%);
+  box-shadow: 0 0.4444444444vh 0 0 hsl(224deg, 28%, 35%);
+  color: hsl(0deg, 0%, 100%);
+}
+.first-theme .key-del:hover, .first-theme .key-reset:hover {
+  background: #a5b1e1;
+}
+.first-theme .key-result {
+  background: hsl(6deg, 63%, 50%);
+  box-shadow: 0 0.4444444444vh 0 0 hsl(6deg, 70%, 34%);
+  color: hsl(0deg, 0%, 100%);
+}
+.first-theme .key-result:hover {
+  background: #f96c5b;
+}
+.first-theme .attribution a {
+  color: hsl(28deg, 16%, 65%);
+}
+
+body.second-theme {
+  background-color: hsl(0deg, 0%, 90%);
+  color: hsl(60deg, 10%, 19%);
+}
+
+.second-theme .calc__theme-switch {
+  background: hsl(0deg, 5%, 81%);
+}
+.second-theme .calc__theme-button {
+  background-color: hsl(25deg, 98%, 40%);
+}
+.second-theme .calc__theme-button:hover {
+  background: #ff8b38;
+}
+.second-theme .calc__result {
+  background: hsl(0deg, 0%, 93%);
+}
+.second-theme .calc__keyboard {
+  background: hsl(0deg, 5%, 81%);
+}
+.second-theme .calc__key {
+  background: hsl(45deg, 7%, 89%);
+  box-shadow: 0 0.4444444444vh 0 0 hsl(35deg, 11%, 61%);
+  color: hsl(60deg, 10%, 19%);
+}
+.second-theme .calc__key:hover {
+  background: #ffffff;
+}
+.second-theme .key-del, .second-theme .key-reset {
+  background: hsl(185deg, 42%, 37%);
+  box-shadow: 0 0.4444444444vh 0 0 hsl(185deg, 58%, 25%);
+  color: hsl(0deg, 0%, 100%);
+}
+.second-theme .key-del:hover, .second-theme .key-reset:hover {
+  background: #62b5bd;
+}
+.second-theme .key-result {
+  background: hsl(25deg, 98%, 40%);
+  box-shadow: 0 0.4444444444vh 0 0 hsl(25deg, 99%, 27%);
+  color: hsl(0deg, 0%, 100%);
+}
+.second-theme .key-result:hover {
+  background: #ff8b38;
+}
+.second-theme .attribution a {
+  color: hsl(28deg, 16%, 65%);
+}
+
+body.third-theme {
+  background-color: hsl(268deg, 75%, 9%);
+  color: hsl(52deg, 100%, 62%);
+}
+
+.third-theme .calc__theme-switch {
+  background: hsl(268deg, 71%, 12%);
+}
+.third-theme .calc__theme-button {
+  background-color: hsl(176deg, 100%, 44%);
+}
+.third-theme .calc__theme-button:hover {
+  background: #94fff9;
+}
+.third-theme .calc__result {
+  background: hsl(268deg, 71%, 12%);
+}
+.third-theme .calc__keyboard {
+  background: hsl(268deg, 71%, 12%);
+}
+.third-theme .calc__key {
+  background: hsl(268deg, 47%, 21%);
+  box-shadow: 0 0.4444444444vh 0 0 hsl(290deg, 70%, 36%);
+  color: hsl(52deg, 100%, 62%);
+}
+.third-theme .calc__key:hover {
+  background: #6b34ac;
+}
+.third-theme .key-del, .third-theme .key-reset {
+  background: hsl(281deg, 89%, 26%);
+  box-shadow: 0 0.4444444444vh 0 0 hsl(285deg, 91%, 52%);
+  color: hsl(0deg, 0%, 100%);
+}
+.third-theme .key-del:hover, .third-theme .key-reset:hover {
+  background: #8731ae;
+}
+.third-theme .key-result {
+  background: hsl(176deg, 100%, 44%);
+  box-shadow: 0 0.4444444444vh 0 0 hsl(177deg, 92%, 70%);
+  color: hsl(198deg, 20%, 13%);
+}
+.third-theme .key-result:hover {
+  background: #94fff9;
+}
+.third-theme .attribution a {
+  color: hsl(28deg, 16%, 65%);
+}
+
+body {
+  transition: 0.3s;
+  transition-property: background, color;
+  position: relative;
+  font-family: "League Spartan", sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+}
+body button {
+  font-size: 18px;
+}
+
+.wrapper {
+  padding: 0 6.4vw;
+  height: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template: 1fr auto 1fr auto/1fr;
+}
+
+.calc {
+  grid-row: 2/3;
+}
+.calc__header {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 3.5555555556vh;
+}
+.calc__theme-title {
+  margin-bottom: 5px;
+}
+.calc__theme-title {
+  margin-right: 28px;
+  font-size: 12px;
+  text-transform: uppercase;
+  text-align: right;
+  flex: 1 1 auto;
+  margin-bottom: 8px;
+}
+.calc__theme-choice {
+  width: 70px;
+}
+.calc__theme-number {
+  display: flex;
+  justify-content: space-around;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+.calc__theme-switch {
+  transition: 0.3s;
+  transition-property: background;
+  height: 26px;
+  border-radius: 13px;
+  padding: 4px;
+}
+.calc__theme-button {
+  transition: 0.3s;
+  transition-property: background, transform;
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+}
+.calc__result {
+  transition: 0.3s;
+  transition-property: background;
+  width: 87.2vw;
+  border-radius: 8px;
+  padding: 2.7777777778vh 25px;
+}
+.calc__output {
+  text-align: right;
+  transform-origin: left;
+}
+.calc__keyboard {
+  transition: 0.3s;
+  transition-property: background;
+  margin-top: 2.6666666667vh;
+  padding: 3.5555555556vh;
+  border-radius: 8px;
+  display: grid;
+  grid-template: 1fr 1fr 1fr 1fr 1fr/1fr 1fr 1fr 1fr;
+  gap: 3.2222222222vh 2.7777777778vh;
+}
+.calc__key {
+  transition: 0.3s;
+  transition-property: background;
+  padding: 1.6666666667vh;
+  border-radius: 10px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.key-reset {
+  grid-column: 1/3;
+}
+
+.key-result {
+  grid-column: 3/5;
+}
+
+.attribution {
+  transition: 0.3s;
+  transition-property: color;
+  padding: 15px 0;
+  font-size: 12px;
+  grid-row: 4/5;
+}
+.attribution a {
+  transition: 0.3s;
+  transition-property: color;
+}
+
+@media (min-width: 500px) {
+  body button {
+    font-size: 24px;
+  }
+  .wrapper {
+    width: 540px;
+    padding: 0;
+  }
+  .calc__result {
+    width: 540px;
+    border-radius: 8px;
+    padding: 3.8888888889vh 35px;
+  }
+  .attribution {
+    padding: 15px;
+  }
+}
